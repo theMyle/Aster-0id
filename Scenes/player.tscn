@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbh87cgggm6wl"]
+
+[ext_resource type="Texture2D" uid="uid://ccki6v0376qui" path="res://Asteroid Sheet.png" id="1_tkvsn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7gudf"]
+radius = 7.33333
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ucny"]
+radius = 7.33333
+height = 38.6667
+
+[node name="player" type="Area2D"]
+scale = Vector2(1.5, 1.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_tkvsn")
+offset = Vector2(-0.3, 0)
+hframes = 19
+vframes = 19
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_7gudf")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5ucny")
+metadata/_edit_group_ = true
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+position = Vector2(0.5, 1.17114)
+scale = Vector2(0.5, 1.01007)
+points = PackedVector2Array(-1, -18.32, -1, -125.244)
+width = 1.0

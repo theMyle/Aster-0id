@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ogob5rqujkj2"]
+
+[ext_resource type="Texture2D" uid="uid://ccki6v0376qui" path="res://Asteroid Sheet.png" id="1_g75ld"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mh00i"]
+size = Vector2(4, 4)
+
+[node name="Node2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("1_g75ld")
+offset = Vector2(-0.6, -0.2)
+hframes = 19
+vframes = 19
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mh00i")
